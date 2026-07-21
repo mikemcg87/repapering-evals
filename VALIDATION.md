@@ -6,6 +6,27 @@ Tier 1 banks). Until every box relevant to a document is checked, that document'
 fate-map stays marked `AWAITING DESK VALIDATION` and no model baselines are
 published against it.
 
+## Method (2026-07-21): guided reconstruction, not blank-page recall
+
+The author is 2.5 years off the desk and worked with the bank's playbook to hand —
+so validation runs as a structured elicitation, honestly recorded:
+
+1. **Source pack first**: `research/gmra-version-changes-sourced.md` (public,
+   cited: ICMA guidance, 2011 Protocol mechanics, law-firm change charts) is read
+   BEFORE the checklist — recognition unlocks what recall can't.
+2. **Interview, not checklist-alone**: the author answers desk-shaped questions
+   ("when a large fund pushed back on X, what was the fallback") rather than
+   abstract correctness questions. Episodic memory is the asset being mined.
+3. **Three-way verdicts**: each item resolves CONFIRMED (author is sure) /
+   SOURCED (author unsure, public source settles it — cite it) /
+   OPEN (neither — stays flagged, and the item is either cut from scoring or
+   marked contested in the fate-map). Unsure-but-plausible is NOT a pass.
+4. **Leverage dimension**: the author's desk was Morgan Stanley — terms were
+   near-dictated to small funds/retail banks, genuinely negotiated with peer
+   banks and mega-funds. Fate-maps and markup patterns differ by counterparty
+   leverage; SYN-001's implied counterparty must be stated, and future corpus
+   items should vary this axis deliberately.
+
 ## SYN-001 exemplar (corpus/syn-001/)
 
 From the exemplar's own validation asks:
