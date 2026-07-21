@@ -26,6 +26,36 @@ This is the same discipline as my RAG repo
 authored fixtures, absent-provision questions where "not present" is the passing
 answer, and honest baselines published even when unflattering.
 
+## Where does ground truth come from? (the actual hard problem)
+
+Authored ground truth needs an author who knows the answers — and GMRA
+negotiation knowledge lives almost nowhere public: member-only ICMA
+working-group minutes, a handful of practitioner books, and negotiators' heads.
+The author is a former negotiator, 2.5 years off the desk. Rather than pretend
+that's not a complication, this repo publishes its way through it:
+
+- **`METHODOLOGY.md`** — expert elicitation as ground-truth authoring: every
+  fact earns `CONFIRMED` (desk memory), `SOURCED` (public citation), or `OPEN`
+  (flagged, cut from scoring, or contested). "Unsure but plausible" is not a
+  grade.
+- **`interviews/`** — the elicitation sessions themselves, published
+  (anonymized). The provenance trail is part of the artifact, including the
+  "I don't remember" answers.
+- **`research/gmra-version-changes-sourced.md`** — the cited source pack:
+  1995→2000→2011 change mechanics from primary sources, plus a census of where
+  negotiation practice is actually documented (short answer: barely anywhere —
+  which is why this corpus might matter).
+- **`CONTRIBUTING.md`** — an open invitation to refutation: if you negotiated
+  these documents and something here smells wrong, that issue is worth more
+  than any star.
+
+This method has already earned its keep once: the corpus's "FOCB" rider looked
+like a candidate hallucination — unconfirmable from any ICMA or standard
+material — until practitioner literature confirmed it as a real fund-side
+markup term that simply never appears in standard text. Standard text versus
+negotiated markup is exactly the distinction these evals test; the method
+tripped over a live example in its own corpus.
+
 ## Corpus methodology
 
 - Each corpus document is a synthetic legacy pack: a GMRA 1995 fact pattern with
@@ -112,7 +142,11 @@ corpus/syn-001/fate-map.yaml   authored ground truth (model never sees this)
 playbook/                      negotiation playbook draft (public-source, unvalidated)
 evals/tasks.md                 task definitions and scoring rules
 evals/run_eval.py              runnable harness, trivial baseline included
+METHODOLOGY.md                 expert elicitation as ground-truth authoring
+interviews/                    the elicitation sessions, published (anonymized)
+research/                      cited source pack + practitioner-source census
 VALIDATION.md                  the author's desk-validation checklist
+CONTRIBUTING.md                refutation invitation for practitioners
 ```
 
 ## License
