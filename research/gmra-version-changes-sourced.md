@@ -161,3 +161,60 @@ The negotiators' battleground, from GN-2011 pp.14–15, 27–29 and CC-2011:
 ---
 
 *Prepared for corpus validation. Not legal advice. All Guidance Notes quotations were text-extracted from the official PDFs listed at the top; page references are to the printed page numbers in those PDFs.*
+
+## Practitioner sources — where negotiators actually talk
+
+*Added 2026-07-21. Every URL below was fetched live on that date unless marked otherwise. Ratings are for one purpose only: validating fund-vs-bank markup patterns for the synthetic GMRA corpus.*
+
+### 8.1 Jolly Contrarian — yes, it has a clause-by-clause GMRA anatomy (HIGH, free)
+
+JC does for the **2000 GMRA** what it does for the ISDA: a full "owner's manual" anatomy, Paragraphs 1–21 plus Schedule, Buy/Sellback Annex (BSA 1–4) and Equities Annex (EA 1–5), each page with a Nutshell™ paraphrase, full clause text (templated), a 1996 MRA cross-reference slot, and JC-style commentary. Verified by crawling the paragraph index and sampling pages. **Caveats:** the GMRA commentary is noticeably thinner than the ISDA anatomy (some pages are mostly nutshell + text, commentary a few paragraphs); it covers the 2000 form, not 1995 or 2011; and jollycontrarian.com returns **403 to non-browser fetchers** (WebFetch fails; a browser user-agent works fine).
+
+Best five pages (all verified live via curl with browser UA):
+- Landing/anatomy hub: https://jollycontrarian.com/index.php?title=GMRA (also reachable as `Global_Master_Repurchase_Agreement`)
+- Paragraph 10 — Events of Default: https://jollycontrarian.com/index.php?title=10_-_GMRA_Provision — commentary explicitly contrasts GMRA single-category EoDs with ISDA EoD/Termination Event architecture; useful for how negotiators *think about* the EoD list
+- Paragraph 4 — Margin Maintenance: https://jollycontrarian.com/index.php?title=4_-_GMRA_Provision
+- Paragraph 6 — Payment and Transfer (home of 6(j)): https://jollycontrarian.com/index.php?title=6_-_GMRA_Provision
+- Full category index (all GMRA pages): https://jollycontrarian.com/index.php?title=Category:GMRA
+
+### 8.2 HedgeLegal (Poseidon Retsinas) — the best public fund-side markup voice (HIGH, free)
+
+No GMRA-specific series, but the PB/NAV pieces are the closest public analogue to buy-side markup lore: written by a fund-side negotiator, listing the exact asks a fund makes against a dealer's template. Directly transferable to fund-vs-bank GMRA dynamics (NAV triggers, cure periods, EoD scope, cross-default). Publications index: https://hedgelegal.com/publications (verified live).
+
+- **PB Agreement Negotiation Part 1** (Dec 2019): https://hedgelegal.com/prime-brokerage-agreement-negotiation-everything-a-hedge-fund-needs-to-know-part-1/ — also as PDF: https://hedgelegal.com/wp-content/uploads/2019/12/Prime-Brokerage-Agreement-Negotiation-Part-1.pdf
+- **PB Negotiation Part 2 — Protecting Against Prime Broker Failure; 12 Years After Lehman** (Sep 2020): https://hedgelegal.com/pb-negotiation-part-2-protecting-against-prime-broker-failure-12-years-after-lehman/ — PDF: https://hedgelegal.com/wp-content/uploads/2020/09/Prime-Brokerage-Agreement-Negotiation-Part-2.pdf
+- **How Fund Managers Can Mitigate NAV Triggers' Impact on Trading Agreements** (HFLR, May 2020; free reprint): https://hedgelegal.com/wp-content/uploads/2023/09/How-Fund-Managers-Can-Mitigate-NAV-Triggers-Impact-on-Trading-Agreements.pdf — the single best public source on NAV-trigger levels/mechanics across ISDA/MRA/GMRA fund docs
+- **U.S. Treasury Clearing: Key Impacts for Hedge Funds** (Mar 2026): https://hedgelegal.com/u-s-treasury-clearing-key-impacts-and-required-actions-for-hedge-funds/ — confirms sponsored-repo was documented via non-standardised MRA/GMRA annexes varying by dealer (good corpus-realism detail)
+- The **"fish-or-cut-bait"** waiver-after-EoD provision appears in the Retsinas HFLR series (Mar 5, 2020); part three of the paywalled HFLR original: https://www.hflawreport.com/2552136/how-fund-managers-can-mitigate-prime-broker-risk-legal-considerations-when-negotiating-prime-brokerage-agreements-part-three-of-three.thtml (Hedge Fund Law Report itself: paywalled, MED for repo specifically)
+
+### 8.3 ICMA GMRA Clause Taxonomy & Library, with D2 Legal Technology (HIGH, free)
+
+- Strategy paper (May 2022, free PDF, verified via search result link): https://www.icmagroup.org/assets/ICMA-GMRA-Clause-Taxonomy-and-Library-Strategy-Paper-May-2022.pdf
+- This is quasi-official but earns its place in the practitioner layer: the whole project exists because firms negotiate the same GMRA clauses in divergent wordings, and the taxonomy documents **which clauses attract negotiation and what the variant business outcomes are** — i.e., a census of real markup practice, assembled with D2LT from member banks' negotiated books. Best single validator for "is this a clause funds/banks actually touch?"
+- D2LT (d2legaltech.com) lists GMRA/GMSLA/PB doc-data consulting and posts on LinkedIn (#gmra), but its own site is service pages, not war stories (LOW standalone).
+
+### 8.4 Subscription practice notes (MED-HIGH, paywalled)
+
+- **Practical Law (Thomson Reuters), "Repos: Global Master Repurchase Agreement 2011 (GMRA)"** — practice note by Jonathan Haines (partner, Ashurst): https://uk.practicallaw.thomsonreuters.com/w-014-3802 — clause guide with negotiation flavour; companion MRA note at https://uk.practicallaw.thomsonreuters.com/w-008-9570. Access: PL subscription (most City firms; trials available). Verified the resource pages resolve; content paywalled.
+- **LexisNexis (Lexis+ UK PSL), "An introduction to repo and the Global Master Repurchase Agreement (GMRA)"**: https://www.lexisnexis.co.uk/legal/guidance/an-introduction-to-repo-the-global-master-repurchase-agreement-gmra — guidance note, paywalled with free preview.
+- These are drafted by practising negotiators and state default positions/market practice, but in sanitised know-how register — good for verifying claims, not for chatter.
+
+### 8.5 Books — the real negotiation manuals (HIGH, paid)
+
+- **Harding & Johnson, *A Practical Guide to Using Repo Master Agreements: Existing market practice for legal documentation in Europe and the USA*, 3rd ed., Harriman House, 2017** (ISBN 9780857195852; earlier ed. 1843741202). Clause-by-clause text **and commentary** on the GMRA, the US MRA, and the BNYM tri-party agreement, written from documentation-desk experience (Harding also wrote *Mastering the ISDA Master Agreements*, the canonical ISDA negotiation manual). **The single closest thing in print to GMRA negotiation ground truth.** https://www.amazon.com/Practical-Guide-Using-Master-Agreements/dp/0857195859
+- **Choudhry, *The Repo Handbook*, 2nd ed., Elsevier/Butterworth-Heinemann, 2010** (ISBN 9780750681599): https://www.sciencedirect.com/book/9780750681599/the-repo-handbook — market mechanics and trading; documentation coverage exists but is descriptive, not negotiation-practice. MED.
+- **Frontclear, "Rough Guide to the GMRA 2011 for operations staff & other non-lawyers"** (free PDF, already cited above as FRONTCLEAR-HB): https://www.frontclear.com/wp-content/uploads/2019/05/Rough-guide-to-the-GMRA-2011.pdf — plain-English walk-through incl. Annex I election points. MED-HIGH and free.
+
+### 8.6 ICMA ERCC minutes and working groups (MED, free but patchy)
+
+- ERCC Committee minutes are published as PDFs, e.g. 18 Apr 2018: https://www.icmagroup.org/assets/documents/ERC/2018-04-18-ERCC-Committee-meeting---minutes-200918.pdf and 2 Dec 2015: https://www.icmagroup.org/assets/documents/ERC/Minutes-from-repo-committee-meetings/ERC-Committee-minutes-021215.pdf (links surfaced via search; older tree partially reorganised — navigate from https://www.icmagroup.org/market-practice-and-regulatory-policy/repo-and-collateral-markets/).
+- The **ERCC/GMRA Legal Working Group** (quarterly) is where actual documentation debates happen, but its minutes are member-only; contact ercc@icmagroup.org. Committee-level minutes occasionally reveal what the legal WG is arguing about. MED.
+
+### 8.7 Where negotiators do NOT talk (honest negatives)
+
+- **Reddit/forums: nothing good.** Multiple searches (r/quant, r/financialcareers, site:reddit.com with GMRA/ISDA-negotiation terms) surfaced only job adverts and definitional content. Trading-doc negotiation has no genuine public forum culture; the lore moves through LinkedIn DMs, ISDA/ICMA WGs, and desks. Corpus-validation implication: any confident "practitioners say on Reddit…" claim is itself a hallucination marker.
+- **LinkedIn**: the one verified substantive poster is **Poseidon Retsinas** (https://www.linkedin.com/in/poseidon-retsinas/ — republishes the PB series via LinkedIn Pulse); D2LT's company page posts on GMRA digitisation. No active public "derivatives documentation negotiators" group with verifiable substantive GMRA content was found — groups exist but are gated and low-signal. LOW-MED.
+- **The OTC Space** (theotcspace.com): cleared-derivatives/CCP-centric; searches found no GMRA-negotiation content. LOW for this purpose.
+- **Regulation Tomorrow** (Norton Rose Fulbright blog): regulatory client-alert register, not negotiation practice. LOW.
+- **Podcasts/YouTube**: no dedicated documentation-negotiation podcast verified. ICMA's webinar/podcast library (https://www.icmagroup.org/media-and-market-data/icma-webinars-and-podcasts/) covers repo topics but the GMRA workshops are paid training courses, not free chatter. Securities Finance Times (securitiesfinancetimes.com) carries repo-documentation *news* (e.g. Clause Library launch coverage) — useful for dates, not for markup lore. LOW-MED.
+- **DRS (drs-als.com/gmra-negotiations/)**: outsourced-negotiation vendor; landing page is marketing, with a clause-commentary GMRA guide gated behind a form. Their negotiators demonstrably do this work, but published substance is thin. LOW-MED (guide unverified).
