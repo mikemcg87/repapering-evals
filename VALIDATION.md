@@ -21,7 +21,7 @@ so validation runs as a structured elicitation, honestly recorded:
    SOURCED (author unsure, public source settles it — cite it) /
    OPEN (neither — stays flagged, and the item is either cut from scoring or
    marked contested in the fate-map). Unsure-but-plausible is NOT a pass.
-4. **Leverage dimension**: the author's desk was Morgan Stanley — terms were
+4. **Leverage dimension**: the author's desk was a Tier 1 dealer — terms were
    near-dictated to small funds/retail banks, genuinely negotiated with peer
    banks and mega-funds. Fate-maps and markup patterns differ by counterparty
    leverage; SYN-001's implied counterparty must be stated, and future corpus
