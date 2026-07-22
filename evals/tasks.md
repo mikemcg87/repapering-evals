@@ -1,9 +1,21 @@
 # Eval task definitions
 
-Ground truth for all three tasks is `corpus/<doc-id>/fate-map.yaml` — authored by a
-domain expert alongside the synthetic agreement, currently AWAITING DESK VALIDATION.
+Candidate truth for all three tasks is `corpus/<doc-id>/fate-map.yaml` — drafted
+alongside the synthetic agreement from cited public sources and currently awaiting
+the author's desk-validation pass.
 Model input for all three tasks is `corpus/<doc-id>/agreement.md` only (the model
 never sees the fate-map).
+
+**Current status:** SYN-001 is pre-validation and not scoreable. The shipped harness
+may be run with `--allow-unvalidated` only as a development diagnostic. Its output is
+not a benchmark or model baseline.
+
+## Task 0 — Upgrade-route identification (required gate; not yet implemented)
+
+Before assigning clause fates, identify whether the parties intend to use selected
+2011 GMRA Protocol annexes, bilaterally amend the legacy agreement, or replace it with
+a new 2011 GMRA. Fate labels are route-dependent; an answer that silently assumes a
+route fails this gate.
 
 ## Task 1 — Clause extraction and classification
 

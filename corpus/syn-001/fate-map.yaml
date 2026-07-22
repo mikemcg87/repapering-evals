@@ -1,6 +1,6 @@
-# SYN-001 authored ground truth: fate of each provision under a GMRA 1995 -> 2011 upgrade.
+# SYN-001 source-anchored candidate truth. It is not validated or scoreable.
 # Source: fde-positioning doc 15 (SYN-001 exemplar), anchored to the sourced upgrade table
-# in doc 12. Status: AWAITING DESK VALIDATION — nothing here is validated ground truth yet.
+# in doc 12. Status: PRE-VALIDATION — nothing here is validated ground truth yet.
 #
 # Fate vocabulary (from the source docs' classification: "carries over / conflicts /
 # renegotiate / silently lost"):
@@ -17,11 +17,20 @@
 
 corpus_id: SYN-001
 upgrade_pair: "GMRA 1995 -> GMRA 2011"
-status: AWAITING DESK VALIDATION
-authored: "2026-07-07 (doc 15), against the sourced upgrade table in doc 12"
+status: PRE-VALIDATION — NOT SCOREABLE
+scoreable: false
+drafted: "2026-07-07 (doc 15), against the sourced upgrade table in doc 12"
+upgrade_route:
+  provenance: OPEN
+  note: >
+    "Upgrade to 2011" is underspecified. A Protocol retrofit, bilateral amendment,
+    and replacement 2011 agreement produce different clause fates. No item below can
+    graduate from OPEN until the fact pattern fixes the route or supplies separate
+    answers by route.
 
 provisions:
   - id: P1
+    provenance: OPEN
     agreement_ref: "Part 2(a)"
     name: Default valuation rider
     category: default-valuation
@@ -29,15 +38,15 @@ provisions:
     fate: renegotiate
     severity: high
     reasoning: >
-      An Express Provision under Protocol logic (bespoke DMV procedure — PROT 1.12(a)):
-      preserved, not upgraded. But it is keyed to two concepts the 2011 text deletes
-      (Default Valuation Time; the Default Valuation Notice requirement — doc 12 table
-      row 4), so preservation strands it: deadlines anchored to a defined term that no
-      longer exists. The naive upgrade "preserves" a provision that can no longer operate
-      as written. This is the exemplar's centrepiece conflict.
+      Candidate reasoning only. Under a Protocol retrofit this is an Express Provision
+      (PROT 1.12(a)) and is preserved; under replacement 2011 paper it survives only if
+      deliberately restated. Either way, its Default Valuation Time anchor must be
+      reconciled with the 2011 regime, which deletes that defined term. The bespoke
+      written-notice requirement must also be retained, revised, or removed explicitly.
     sources: ["PROT 1.12(a)", "doc 12 row 4", "CC-2011 §§10(d)-(f)", "GN-2011 §C para 10"]
 
   - id: P2
+    provenance: OPEN
     agreement_ref: "Part 2(b)"
     name: Modified Act of Insolvency
     category: act-of-insolvency
@@ -46,11 +55,10 @@ provisions:
     severity: critical
     cascade_flag: true
     cascade_reasoning: >
-      Under Protocol para 1.13, ANY modification to the Act of Insolvency EoD switches
-      off virtually the entire close-out amendment package (doc 12 table row 2). The
-      collision is not local to this clause — one markup made in 2003 silently disables
-      the 2011 close-out modernisation everywhere else. A reviewer that classifies P2 as
-      a self-contained "renegotiate" without flagging the cascade scores a partial miss.
+      Under a Protocol Annex 1 retrofit, para 1.13 means this modification switches off
+      virtually the entire close-out amendment package. That cascade does not apply in
+      the same way if the parties execute replacement 2011 paper, so it cannot be scored
+      until the upgrade route is fixed.
     reasoning: >
       Bespoke 30-day petition window plus a deleted "composition with creditors" limb
       conflicts limb-by-limb with the widened 2011 Act of Insolvency definition; the
@@ -58,6 +66,7 @@ provisions:
     sources: ["PROT 1.13", "doc 12 row 2", "CC-2011 §2 'Act of Insolvency'"]
 
   - id: P3
+    provenance: OPEN
     agreement_ref: "Part 2(c)"
     name: Payment-default grace period
     category: grace-period
@@ -65,13 +74,14 @@ provisions:
     fate: carries-over
     severity: low
     reasoning: >
-      Grace-period riders are preserved mutatis mutandis (PROT 1.11; doc 12 row 1). The
-      mutatis mutandis is the nuance: the 2011 sequence (event = EoD; notice designates
-      an Early Termination Date within 20 days) changes what the grace period delays.
-      Correct output: carries over, restated against the ETD mechanics.
+      Under a Protocol retrofit, grace-period riders are preserved mutatis mutandis
+      (PROT 1.11). Under replacement paper, the rider must be deliberately restated.
+      In either case the 2011 sequence changes what the grace period delays. Candidate
+      fate only until the route is fixed.
     sources: ["PROT 1.11", "doc 12 row 1"]
 
   - id: P4
+    provenance: OPEN
     agreement_ref: "Part 2(d)"
     name: Set-off rider
     category: set-off
@@ -89,6 +99,7 @@ provisions:
     sources: ["doc 12 row 9", "CC-2011 §10(n)", "PROT Annex 3"]
 
   - id: P5
+    provenance: OPEN
     agreement_ref: null   # deliberate absence: the agreement is silent — see absent_provisions A1
     name: Silence on automatic close-out
     category: automatic-early-termination
@@ -96,15 +107,14 @@ provisions:
     fate: silently-lost
     severity: critical
     reasoning: >
-      The canonical silent fate (doc 12 row 3): the 1995 doc relies on the 1995 default —
-      winding-up petition triggers automatic close-out. 2011 flips the default: automatic
-      termination only if AET is elected in Annex I. An upgrade that doesn't affirmatively
-      make the AET election changes insolvency outcomes without a word of drafting. The
-      eval scores this as the mandatory "found the invisible change" item; a reviewer that
-      only analyses provisions that EXIST will miss it, which is the point.
+      Candidate fate for replacement 2011 paper only: the 1995 default includes automatic
+      close-out for specified insolvency events, while a fresh 2011 form requires an AET
+      election. Under Protocol Annex 1, however, AET is deemed specified. This item is
+      therefore route-dependent and is not currently scoreable.
     sources: ["doc 12 row 3", "CC-2011 §10(a),(b)", "GN-2011 §C para 10"]
 
   - id: P6
+    provenance: OPEN
     agreement_ref: "Part 2(e)"
     name: Fish-or-cut-bait rider
     category: condition-precedent-focb
@@ -112,15 +122,14 @@ provisions:
     fate: renegotiate
     severity: medium-high
     reasoning: >
-      Two collisions. (i) The 1995 doc predates para 6(j) entirely; on upgrade, if 6(j)
-      is elected the rider and the standard condition-precedent must be reconciled or
-      they stack (doc 12 row 7). (ii) The rider's clock runs from notice under 1995
-      mechanics naming fax/telex; 2011 reworks notices (doc 12 row 13), so the trigger's
-      delivery route needs re-keying. Bonus nuance: this provision family is publicly
-      documented (HFLR/Retsinas) — rationale grading can cite it.
+      The existence of FOCB provisions across trading agreements is publicly sourced,
+      but this specific GMRA construction is not. If desk validation accepts it, a new
+      2011 agreement would need to reconcile the standalone withholding right with any
+      6(j) election and update the notice mechanics. Until then the construction is OPEN.
     sources: ["doc 12 rows 7 and 13", "HFLR (Retsinas 2020)", "GN-2000 Exh. I", "CC-2011 §6, §14"]
 
   - id: P7
+    provenance: OPEN
     agreement_ref: "Part 2(f)"
     name: Default interest rider
     category: default-interest
@@ -135,6 +144,7 @@ provisions:
     sources: ["doc 12 row 10", "CC-2011 §§2, 10(g), 12", "PROT 1.6 & Annex 5"]
 
   - id: P8
+    provenance: OPEN
     agreement_ref: "Part 2(g)"
     name: Substitution pre-agreement
     category: substitution
@@ -142,14 +152,14 @@ provisions:
     fate: carries-over
     severity: low
     reasoning: >
-      The control row. Substitution stays consent-based across versions; 2011 only
-      clarifies margin-security valuation timing (doc 12 row 12). Every eval needs clean
-      carry-overs so the metric can distinguish a reviewer that flags everything
-      (precision failure) from one that discriminates.
+      Candidate control row. Substitution stays consent-based across versions; 2011
+      clarifies margin-security valuation timing (doc 12 row 12). Whether this exact
+      Purchased Securities rider needs a conforming edit remains OPEN.
     sources: ["doc 12 row 12", "CC-2011 §8", "GN-2011 §C para 8", "ERCC 3.51"]
 
 amendment_letters:
   - id: AL1
+    provenance: OPEN
     agreement_ref: "Amendment Letter No. 1 (2005)"
     name: Margin schedule
     category: margin
@@ -157,13 +167,13 @@ amendment_letters:
     severity: TBD-validation   # doc 15 gives the interplay but no explicit severity grade
     reasoning: >
       Upgrade interplay (doc 12 row 8): 2011's Method A/B Transaction Exposure election
-      must be made; carrying the bespoke schedule into a Method A world double-counts if
-      Margin Ratios are also stated. Consolidation task: what is the operative margin
-      position TODAY (answer: AL1 schedule, superseding Annex I) — and what must it
-      become post-upgrade (a Method B haircut election restating AL1's tiers).
+      must be made. The class-specific legacy Margin Ratios could be retained under
+      Method A or translated to their economic haircuts under Method B; they must not be
+      applied under both methods. The desired commercial treatment requires validation.
     sources: ["doc 12 row 8", "CC-2011 §§2, 4", "ERCC 2.146, 3.49, 3.60"]
 
   - id: AL2
+    provenance: OPEN
     agreement_ref: "Amendment Letter No. 2 (2013)"
     name: Fails rider
     category: fails
@@ -172,9 +182,9 @@ amendment_letters:
     reasoning: >
       Upgrade interplay (doc 12 rows 5-6): maps onto the 2011 para 10(a)(ii) election
       (fails-as-EoD, if elected) and the standardised mini close-out (para 10(i)); the
-      bespoke rider partially duplicates both. Correct output: renegotiate into the
-      standard election + mini close-out, noting the rolling-90-day trigger has no
-      standard home and must be an express carve-in if wanted.
+      bespoke rider may overlap with both, but converting a transaction-level remedy
+      into a full EoD would alter the commercial outcome. Retain, restate, or replace is
+      OPEN pending route and desk validation.
     sources: ["doc 12 rows 5-6", "GN-2000 Exh. I", "CC-2011 §10(a), §10(i)", "ERCC 4.11-4.14"]
 
 # Things a 1995 agreement lacks that the upgrade must affirmatively address.
@@ -182,24 +192,27 @@ amendment_letters:
 # flagging a provision not on this list = false positive.
 absent_provisions:
   - id: A1
+    provenance: OPEN
     name: Automatic Early Termination election (2011 para 10(b))
     linked_item: P5
     severity: critical
     reasoning: >
-      1995 default = automatic close-out on winding-up petition; 2011 default = no AET
-      unless elected in Annex I. The election must be affirmatively considered/made or
-      insolvency outcomes change silently.
+      Candidate issue for replacement 2011 paper: the AET election must be considered
+      or insolvency outcomes may change. Under Protocol Annex 1, AET is deemed specified,
+      so this is not a universal absence.
     sources: ["doc 12 row 3"]
   - id: A2
+    provenance: OPEN
     name: Transaction Exposure method election (Method A/B, 2011 para 2)
     linked_item: AL1
     severity: TBD-validation
     reasoning: >
-      The 1995 doc (as amended by AL1's haircut schedule) has no Method A/B election to
-      make; on upgrade the election must be made, and AL1's tiers restated as a Method B
-      haircut election to avoid double-counting against Margin Ratios.
+      The 1995 doc (as amended by AL1's class-specific Margin Ratios) has no Method A/B
+      election. Replacement 2011 paper must choose a method: retain the ratios under
+      Method A or translate their economics into Method B haircuts, but not both.
     sources: ["doc 12 row 8"]
   - id: A3
+    provenance: OPEN
     name: Failure-to-deliver EoD election (2011 para 10(a)(ii))
     linked_item: AL2
     severity: TBD-validation
@@ -210,6 +223,7 @@ absent_provisions:
       fails silently move from bespoke treatment to non-default.
     sources: ["doc 12 row 5", "doc 15 Annex I seed note"]
   - id: A4
+    provenance: OPEN
     name: Condition precedent para 6(j) election decision
     linked_item: P6
     severity: TBD-validation
@@ -219,6 +233,7 @@ absent_provisions:
       must be reconciled or they stack.
     sources: ["doc 12 row 7"]
   - id: A5
+    provenance: OPEN
     name: Applicable Rate / IBOR retrofit (Protocol Annex 5)
     linked_item: P7
     severity: TBD-validation
@@ -229,6 +244,7 @@ absent_provisions:
       retrofit this into 1995/2000 docs).
     sources: ["doc 12 row 10", "PROT 1.6 & Annex 5"]
   - id: A6
+    provenance: OPEN
     name: Notice routes re-keying (2011 para 14)
     linked_item: P6
     severity: TBD-validation
@@ -239,11 +255,13 @@ absent_provisions:
     sources: ["doc 12 row 13"]
 
 scoring_notes:
+  scoreable: false
+  pre_validation_warning: >
+    All current items are OPEN. The harness must not present these outputs as a
+    benchmark or model baseline.
   scoreable_items: >
-    11 scoreable items per doc 15: P1-P8 fates + P2's cascade flag + P5's invisible
-    default-flip (counted within P5's fate) + AL1/AL2 interplays. Missed-conflict rate
-    weights P2-cascade and P5 double — they are the expensive failures a human desk
-    existed to catch.
+    Candidate structure only: P1-P8 fates plus AL1/AL2 interplays, with a separate P2
+    cascade concept. None are scoreable until the upgrade route and provenance pass.
   double_weighted: ["P2-cascade", "P5"]
   rationale_grading: >
     LLM-judge anchors: PROT 1.10-1.13 logic for P1/P2/P3; doc 12 row citations for the

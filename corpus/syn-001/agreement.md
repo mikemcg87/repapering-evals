@@ -25,10 +25,11 @@ upgrade impact analysis.
 
 ## Part 2 — Bespoke provisions (rider paragraphs)
 
-**(a) Default valuation rider.** Paraphrase: notwithstanding para 10(e), Default
-Market Value for gilts and DBV collateral shall be determined solely by reference to
+**(a) Default valuation rider.** Paraphrase: notwithstanding the Default Market Value
+definition at para 2(j) and the para 10(c) close-out mechanics, the value of gilts and
+DBV collateral shall be determined solely by reference to
 quotations from three named gilt-edged market makers, obtained no later than the
-Default Valuation Time, with the calculation notified by Default Valuation Notice
+Default Valuation Time, with the calculation supplied in a written valuation notice
 within one business day.
 
 **(b) Modified Act of Insolvency.** Paraphrase: the petition limb applies only if the
@@ -44,8 +45,8 @@ any of Party B's affiliates under any agreement against sums due under this
 Agreement; no reciprocal right for Party B.
 
 **(e) Fish-or-cut-bait rider (fund markup, added by Amendment Letter No. 2, 2013).**
-Paraphrase: if Party A withholds performance following a potential Event of Default
-with respect to Party B, Party A must, within 60 days of the withholding notice
+Paraphrase: Party A may withhold performance following a potential Event of Default
+with respect to Party B, but must, within 60 days of the withholding notice
 (delivered per para 14), either designate an Event of Default or resume performance;
 failing which the withholding right is deemed waived. Notices for this purpose per
 the fax details in Annex I.
@@ -59,9 +60,10 @@ valuation as at the substitution date.
 
 ## Amendment letters
 
-**Amendment Letter No. 1 (2005): margin schedule.** Replaces the Annex I Margin
-Ratio with a tiered haircut schedule by collateral class (gilts 1%, other
-sovereigns 2%, corporates 5%).
+**Amendment Letter No. 1 (2005): margin schedule.** Replaces the single Annex I
+Margin Ratio with collateral-class-specific Margin Ratios: gilts 101.0101%, other
+sovereigns 102.0408%, and corporates 105.2632% (the ratios economically corresponding
+to 1%, 2%, and 5% haircuts respectively).
 
 **Amendment Letter No. 2 (2013): fails rider.** Adds: persistent failure to deliver
 Equivalent Securities (two or more occasions in any rolling 90 days) entitles the

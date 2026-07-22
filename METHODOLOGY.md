@@ -24,7 +24,7 @@ confident guesses — the exact failure mode the evals punish in models.
 
 ## The protocol
 
-Every ground-truth fact earns one of three provenance grades:
+Every candidate ground-truth fact must earn one of three provenance grades:
 
 | Grade | Meaning |
 |---|---|
@@ -34,7 +34,12 @@ Every ground-truth fact earns one of three provenance grades:
 
 "Unsure but plausible" is not a grade. It does not pass.
 
-The grades are produced by structured **elicitation sessions**, published in
+**Current implementation status:** the protocol has not yet been completed for
+SYN-001. Its items are marked `OPEN` and the document is not scoreable. The
+`interviews/` directory currently contains a template and a pending session, not a
+completed published elicitation record.
+
+The grades will be produced by structured **elicitation sessions**, published in
 `interviews/`:
 
 1. **Source pack first.** The expert reads the cited research file before any
@@ -59,14 +64,10 @@ The grades are produced by structured **elicitation sessions**, published in
   with are rusty, busy, or partial. A protocol that extracts calibrated ground
   truth from an imperfect expert — instead of requiring a perfect one — is the
   actually-reusable tool here.
-- It already caught something. The corpus's P6 rider uses the term "FOCB"
-  (fish-or-cut-bait). A source sweep could not confirm it from any ICMA or
-  standard material — candidate hallucination — until the practitioner
-  literature (HedgeLegal, 2020) confirmed it as a real *fund-side markup* term
-  that simply never appears in standard text. The distinction between standard
-  text and negotiated markup is precisely what these evals test, and the
-  method tripped over a live example of it in its own corpus. That story is
-  the best argument for working this way.
+- It has already exposed a useful uncertainty. The corpus's P6 rider uses the term
+  "FOCB" (fish-or-cut-bait). Practitioner literature confirms the term across
+  trading agreements, including repo, but does not settle the specific GMRA
+  condition-precedent construction in SYN-001. That item remains `OPEN`.
 
 ## The leverage axis
 

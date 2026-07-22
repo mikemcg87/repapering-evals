@@ -25,9 +25,10 @@ Notes [GN-2000]) and 2000→2011 (documented in Exhibit I of the Guidance Notes 
 GMRA 2011 [GN-2011] and itemised paragraph-by-paragraph in Clifford Chance's May 2011
 client briefing chart [CC-2011]).
 
-**The public model for collision classification is the 2011 GMRA Protocol itself**
-[PROT]. Its "Preservation of Express Provisions" mechanics (Protocol paras 1.10–1.13)
-encode exactly the fate-map logic the flagship task needs:
+**The 2011 GMRA Protocol is one source for collision-prone provisions, not a universal
+upgrade route** [PROT]. Its "Preservation of Express Provisions" mechanics (Protocol
+paras 1.10–1.13) apply to the Protocol route when both parties make the relevant
+elections:
 
 - Bespoke provisions that alter (i) the Default Market Value determination procedure,
   (ii) the close-out amount calculation, or (iii) any Event-of-Default grace period
@@ -38,10 +39,10 @@ encode exactly the fate-map logic the flagship task needs:
   amendment package is switched off and only the Spot Rate definitional amendment
   survives (para 1.13).
 
-That is: ICMA's own upgrade instrument treats bespoke default-valuation,
-close-out-calculation, grace-period, and Act-of-Insolvency edits as the provisions
-most likely to collide with the 2011 mechanics. This is public ground truth for the
-eval's "carries over / conflicts / renegotiate / silently lost" classification.
+That is useful evidence that bespoke default-valuation, close-out-calculation,
+grace-period, and Act-of-Insolvency edits are high-risk collision surfaces. It is not
+public ground truth for a replacement-document or bilateral-amendment exercise. The
+eval must identify the upgrade route before assigning fates.
 
 | # | Area (para refs) | What changed across 1995→2000→2011 | What a bespoke 1995-era provision touching it collides with on upgrade | Source |
 |---|---|---|---|---|
@@ -203,10 +204,10 @@ unbounded discretion survives**. Public anchors:
 **Eval use (both tracks).** For the negotiation-review task: flag any draft where a
 suspension, valuation, or enforcement right is open-ended, and grade severity by the
 survival of unbounded discretion (none / bounded-but-long / unbounded). For the
-flagship upgrade task: legacy 1995 docs carrying bespoke FOCB-style riders are seeded
-fact patterns — do those riders survive the 1995→2011 upgrade (they are Express
-Provisions in Protocol terms), collide with the 2011's changed close-out clock, or
-need renegotiation? — AWAITING DESK VALIDATION.
+flagship upgrade task: legacy 1995 docs carrying bespoke FOCB-style riders may be
+seeded fact patterns only after desk validation. A FOCB/withholding rider is not
+automatically an "Express Provision" under the Protocol's limited definition; its
+treatment depends on its drafting and the upgrade route. — AWAITING DESK VALIDATION.
 
 ---
 

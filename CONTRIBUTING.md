@@ -13,11 +13,11 @@ Ways to contribute, in order of value:
    AL1-AL2) and say what a real 1995-vintage pack would have done differently.
    Shape and plausibility, not drafting style — the documents are deliberately
    paraphrase-style.
-2. **Challenge a fate.** Every fate in `corpus/syn-001/fate-map.yaml` carries a
-   provenance grade (see `METHODOLOGY.md`). If you disagree with a `CONFIRMED`
-   item, you are disagreeing with one expert's memory — say so, and say what
-   your desk did instead. Disagreements between practitioners are corpus gold:
-   they become contested items with both positions recorded.
+2. **Challenge a fate.** Every current fate in
+   `corpus/syn-001/fate-map.yaml` is an `OPEN` candidate pending the author's
+   validation pass. If you disagree, say what your desk did instead.
+   Disagreements between practitioners are corpus gold: they become contested
+   items with both positions recorded.
 3. **Answer an OPEN item.** `VALIDATION.md` and the interview logs list what
    neither the expert nor public sources could settle.
 4. **Add negotiation-practice sources.** The census in

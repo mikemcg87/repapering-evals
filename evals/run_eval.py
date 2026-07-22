@@ -11,9 +11,9 @@ in evals/tasks.md:
 
 Dependencies: Python standard library + PyYAML.
 
-The shipped backend is a trivial baseline (see TrivialBaseline) so the harness
-runs end-to-end today and produces an honest, unflattering number. Real model
-backends plug in by implementing ModelBackend.
+The shipped backend is an oracle-assisted development diagnostic. It reads the
+candidate fate-map to exercise the scorer end to end; it is not a model baseline.
+Real model backends plug in by implementing ModelBackend.
 
 Usage:
     python3 evals/run_eval.py [--corpus corpus/syn-001]
@@ -65,6 +65,10 @@ class CorpusDoc:
     def double_weighted(self) -> set[str]:
         notes = self.fate_map.get("scoring_notes", {})
         return set(notes.get("double_weighted", []))
+
+    @property
+    def scoreable(self) -> bool:
+        return bool(self.fate_map.get("scoreable", False))
 
 
 def load_corpus(corpus_dir: Path) -> CorpusDoc:
@@ -120,9 +124,8 @@ class ModelBackend:
         raise NotImplementedError
 
 
-class TrivialBaseline(ModelBackend):
-    """Deliberately dumb non-model baseline, so the harness has a real number
-    from day one.
+class OracleAssistedDiagnostic(ModelBackend):
+    """Development diagnostic for exercising the scoring path.
 
     - Task 1: "extracts" every ground-truth provision ref (i.e. assumes perfect
       extraction — generous) but labels each with the corpus's most common
@@ -131,9 +134,12 @@ class TrivialBaseline(ModelBackend):
       cascade.
     - Task 3: flags nothing (the classic failure mode this task exists to
       punish: only analysing provisions that exist).
+
+    This deliberately reads candidate truth from the evaluated document. Its
+    output must never be reported as a model baseline.
     """
 
-    name = "trivial-baseline"
+    name = "oracle-assisted-diagnostic"
 
     def predict(self, doc: CorpusDoc) -> Predictions:
         present = doc.present_provisions
@@ -262,8 +268,8 @@ def print_results(doc: CorpusDoc, backend: ModelBackend, t1: dict, t2: dict, t3:
         print(f"{label:<{width}}  {fmt(value)}")
     print("-" * (width + 10))
     print(
-        "note: ground truth is AWAITING DESK VALIDATION (see VALIDATION.md); "
-        "no model baselines are published until it passes."
+        "note: candidate truth is PRE-VALIDATION (see VALIDATION.md); this is "
+        "an oracle-assisted development diagnostic, not a model baseline."
     )
 
 
@@ -274,10 +280,20 @@ def main() -> None:
         default=str(REPO_ROOT / "corpus" / "syn-001"),
         help="path to a corpus document directory (default: corpus/syn-001)",
     )
+    parser.add_argument(
+        "--allow-unvalidated",
+        action="store_true",
+        help="run the oracle-assisted development diagnostic on an unvalidated corpus",
+    )
     args = parser.parse_args()
 
     doc = load_corpus(Path(args.corpus))
-    backend = TrivialBaseline()
+    if not doc.scoreable and not args.allow_unvalidated:
+        parser.error(
+            "corpus is PRE-VALIDATION and not scoreable; use --allow-unvalidated "
+            "only for the development diagnostic"
+        )
+    backend = OracleAssistedDiagnostic()
     pred = backend.predict(doc)
     print_results(
         doc,
