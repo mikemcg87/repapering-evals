@@ -1,5 +1,9 @@
 # repapering-evals
 
+> **Status — parked (2026-07-22).** This repository is preserved as a transparent
+> pre-validation research snapshot. The corpus has not been desk-validated, the
+> harness is not a model benchmark, and no further development is currently planned.
+
 Research prototype for evaluating LLM performance on legal repapering — specifically,
 upgrading legacy GMRA 1995 repo agreements to GMRA 2000/2011 terms. The current
 fate-map is a source-anchored draft, not validated ground truth.
